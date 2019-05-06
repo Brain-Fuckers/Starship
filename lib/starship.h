@@ -4,66 +4,72 @@
 
 class Starship
 {
-    //    FuelTank;
-        FuelType;
-        Capacity;
-        Amount;
-        Leakage;
-    //    fuel system
-        Productivity;
-        Leakage;
+private:
+//    FuelTank;
+    FuelType;
+    Capacity;
+    Amount;
+    Leakage;
+//    fuel system
+    Productivity;
+    Leakage;
 
-    //    PowerStation;
-        FuelType;
-        Efficiency;
-        Productivity;
+//    PowerStation;
+    FuelType;
+    Efficiency;
+    Productivity;
 
-    //    EnergyStorage;
-        Productivity;
-        Capacity;
-        Amount;
-        Leakage;
+//    EnergyStorage;
+    Productivity;
+    Capacity;
+    Amount;
+    Leakage;
 
-    //    DriveUnit;
-        MaxConsumption;
-    //    Mode;
-        Range;
-        Speed;
-        Consumption;
+//    DriveUnit;
+    MaxConsumption;
+//    Mode;
+    Range;
+    Speed;
+    Consumption;
 
-    //    TeleportUnit;
+//    TeleportUnit;
 
-    //    Cannon;
-        MaxConsumption;
-        Accuracy;
-        MaxShells;
-        Shells;
-    //    Mode;
-        FireRate;
-        Power;
-        Consumption;
+//    Cannon;
+    MaxConsumption;
+    Accuracy;
+    MaxShells;
+    Shells;
+//    Mode;
+    FireRate;
+    Power;
+    Consumption;
 
-    //    EnergyShield;
-        MaxConsumption;
-        Efficiency;
-        Leakage;
+//    EnergyShield;
+    MaxConsumption;
+    Efficiency;
+    Leakage;
 
-    //    TransportModule;
-    //    TransportSystem;
+//    TransportModule;
+//    TransportSystem;
 
-    //    Armor
+//    Armor
 
-    //    DistortingField;
-        MaxConsumption;
-    //    Mode;
-        Radius;
-        Coefficient;
-        Consumption;
+//    DistortingField;
+    MaxConsumption;
+//    Mode;
+    Radius;
+    Coefficient;
+    Consumption;
 
-    //    RepairSystem;
+//    RepairSystem;
+
+//    CommunicationSystem;
+
+//    Shell;
 
 public:
     Starship();
+//    effect(Module, Effect);
 };
 
 #endif // STARSHIP_H
