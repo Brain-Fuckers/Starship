@@ -5,3 +5,8 @@ Starship::Starship()
 
 }
 
+Starship::damage()
+{
+
+}
+

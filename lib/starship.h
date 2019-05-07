@@ -5,6 +5,9 @@
 class Starship
 {
 private:
+    Position;
+
+/*
 //    FuelTank;
     FuelType;
     Capacity;
@@ -13,19 +16,23 @@ private:
 //    fuel system
     Productivity;
     Leakage;
+*/
 
-//    PowerStation;
+//    PowerStation; // Генерация энергии
+    Strength;
     FuelType;
     Efficiency;
     Productivity;
 
-//    EnergyStorage;
+//    EnergyStorage; // Запасает и быстро отдаёт энергию
+    Strength;
     Productivity;
     Capacity;
     Amount;
     Leakage;
 
-//    DriveUnit;
+//    DriveUnit; //
+    Strength;
     MaxConsumption;
 //    Mode;
     Range;
@@ -34,6 +41,7 @@ private:
 
 //    TeleportUnit;
 
+/*
 //    Cannon;
     MaxConsumption;
     Accuracy;
@@ -43,16 +51,24 @@ private:
     FireRate;
     Power;
     Consumption;
+*/
 
-//    EnergyShield;
+//    EnergyShield; //поглащение урона, перегрузка
+    Strength;
     MaxConsumption;
     Efficiency;
     Leakage;
 
+//    Armor
+    Strength; //Вероятность отразить урон.
+
+//    Shell;
+    Strength; //При мгновенном сильном повреждении может оторвать модули.
+
+/*
 //    TransportModule;
 //    TransportSystem;
 
-//    Armor
 
 //    DistortingField;
     MaxConsumption;
@@ -65,11 +81,14 @@ private:
 
 //    CommunicationSystem;
 
-//    Shell;
+*/
 
 public:
     Starship();
-//    effect(Module, Effect);
+// //     effect(Module, Effect);
+//    shot();
+//    move();
+    damage(); //уворот, поглащение щитами, отражение броне, поглащение бронёй, поглащение корпусом.
 };
 
 #endif // STARSHIP_H
