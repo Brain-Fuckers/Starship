@@ -5,7 +5,7 @@
 class Starship
 {
 private:
-    Position;
+//    Position;
 
 /*
 //    FuelTank;
@@ -18,19 +18,20 @@ private:
     Leakage;
 */
 
-//    PowerStation; // Генерация энергии
+//    PowerStation; // Генерация энергии, медленно нарастает мощьность.
     Strength;
-    FuelType;
-    Efficiency;
+//    FuelType;
+//    Efficiency;
     Productivity;
 
-//    EnergyStorage; // Запасает и быстро отдаёт энергию
+//    EnergyStorage; // Запасает и быстро отдаёт энергию, обладает энергостоком
     Strength;
-    Productivity;
+    Productivity; //Способность отдавать энергии за секунду времени
     Capacity;
     Amount;
-    Leakage;
+    Leakage; // пороцент от запасённого в секунду
 
+/*
 //    DriveUnit; //
     Strength;
     MaxConsumption;
@@ -38,6 +39,7 @@ private:
     Range;
     Speed;
     Consumption;
+*/
 
 //    TeleportUnit;
 
@@ -56,14 +58,17 @@ private:
 //    EnergyShield; //поглащение урона, перегрузка
     Strength;
     MaxConsumption;
-    Efficiency;
+    Overload; //время поглащения урона
+//    Efficiency;
     Leakage;
 
+/*
 //    Armor
     Strength; //Вероятность отразить урон.
 
 //    Shell;
     Strength; //При мгновенном сильном повреждении может оторвать модули.
+*/
 
 /*
 //    TransportModule;
@@ -82,9 +87,11 @@ private:
 //    CommunicationSystem;
 
 */
+//    void energyShieldAbsorb(*Damage); //Demage - длительнось, количество энергии, энергии в секунду, время начала воздействия
 
 public:
     Starship();
+    init();
 // //     effect(Module, Effect);
 //    shot();
 //    move();
