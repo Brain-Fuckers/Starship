@@ -1,6 +1,10 @@
 #ifndef STARSHIP_H
 #define STARSHIP_H
 
+#include "effect.h"
+#include "permanenteffect.h"
+#include "energystation.h"
+#include "energystorage.h"
 
 class Starship
 {
@@ -18,18 +22,19 @@ private:
     Leakage;
 */
 
-//    PowerStation; // Генерация энергии, медленно нарастает мощьность.
-    Strength;
+    EnergyStation EStation;
+//    EnergyStation; // Генерация энергии, медленно нарастает мощьность.
+//    double Strength;
 //    FuelType;
 //    Efficiency;
-    Productivity;
+//    double PSProductivity;
 
-//    EnergyStorage; // Запасает и быстро отдаёт энергию, обладает энергостоком
-    Strength;
-    Productivity; //Способность отдавать энергии за секунду времени
-    Capacity;
-    Amount;
-    Leakage; // пороцент от запасённого в секунду
+    EnergyStorage EStorage; // Запасает излишки енергии, быстро отдаёт энергию, обладает энергостоком
+//    double Strength;
+//    double ESProductivity; //Способность отдавать энергии за секунду времени
+//    double ESCapacity;
+//    double ESAmount;
+//    double Leakage; // пороцент от запасённого в секунду
 
 /*
 //    DriveUnit; //
@@ -56,11 +61,12 @@ private:
 */
 
 //    EnergyShield; //поглащение урона, перегрузка
-    Strength;
-    MaxConsumption;
-    Overload; //время поглащения урона
+//    double Strength;
+    double EShMaxConsumption;
+    double EShEfficiency;
+//    double EShOverload; //время поглащения урона
 //    Efficiency;
-    Leakage;
+//    double EShLeakage;
 
 /*
 //    Armor
@@ -87,15 +93,21 @@ private:
 //    CommunicationSystem;
 
 */
-//    void energyShieldAbsorb(*Damage); //Demage - длительнось, количество энергии, энергии в секунду, время начала воздействия
+
+    Effect Consumption;
+
+    Effect energyShieldAbsorb(Effect Damage); //Demage - длительнось, количество энергии, энергии в секунду, время начала воздействия
+    double energyGenerationRate(double Time);
+    double energyShieldEfficiency(double Time);
 
 public:
     Starship();
-    init();
+    void init();
 // //     effect(Module, Effect);
 //    shot();
 //    move();
-    damage(); //уворот, поглащение щитами, отражение броне, поглащение бронёй, поглащение корпусом.
+    void status(double Time);
+    Effect damage(Effect Damage); //уворот, поглащение щитами, отражение броне, поглащение бронёй, поглащение корпусом.
 };
 
 #endif // STARSHIP_H

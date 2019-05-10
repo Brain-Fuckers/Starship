@@ -5,14 +5,14 @@
 class Module
 {
 private:
-    Type;
-    Name;
-    States; //is active, ...
-    Effects; //Massa,consumption, ...
-    Actions; //produce enery, shot, ...
-    SubModules;
-    Storage;
-    Consumptions;
+//    Type;
+//    Name;
+//    States; //is active, ...
+//    Effects; //Massa,consumption, ...
+//    Actions; //produce enery, shot, ...
+//    SubModules;
+//    Storage;
+//    Consumptions;
 
 public:
     Module();

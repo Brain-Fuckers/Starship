@@ -1,4 +1,5 @@
 #include <iostream>
+#include "../lib/starship.h"
 
 using namespace std;
 
@@ -6,10 +7,12 @@ int main()
 {
     cout << "Hello World!" << endl;
     Starship unit;
-//    State unit.state();
     unit.init();
-    unit.demage();
-    cout << State << endl;
+    for (int i; i < 10; i++){
+        unit.status((double)i);
+    }
+//    unit.demage();
+//    cout << State << endl;
 
     return 0;
 }
